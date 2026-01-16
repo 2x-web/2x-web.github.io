@@ -15,12 +15,8 @@ const Webamp = window.Webamp;
 		},
 		initialTracks: [
 	        {
-				url: "https://file.garden/Z-2H6tWhPAglb48I/05%20Kanye%20West%20-%20On%20God.flac",
-				defaultName: "Kanye West - On God",
-			},
-			{
-				url: "https://file.garden/aWqglscXH3YX9a2r/Kanye%20West%2C%20Clipse%20%26%20Kenny%20G%20-%20Use%20This%20Gospel.flac",
-				defaultName: "Kanye West - Use This Gospel",
+				url: "https://file.garden/aWqglscXH3YX9a2r/Kanye%20West%20-%20Bound%202%20(Album%20Version%20(Explicit))%20(4).flac",
+				defaultName: "Kanye West - Bound 2",
 			},
 			{
 				url: "https://file.garden/aWqglscXH3YX9a2r/Lil%20Uzi%20Vert%20-%20Days%20Come%20and%20Go.flac",
