@@ -1,0 +1,47 @@
+const Webamp = window.Webamp;
+	const webamp = new Webamp({
+		__butterchurnOptions: {
+			importButterchurn: () => Promise.resolve(window.butterchurn),
+			getPresets: () => {
+				const presets = window.butterchurnPresets.getPresets();
+				return Object.keys(presets).map((name) => {
+					return {
+						name,
+						butterchurnPresetObject: presets[name],
+					};
+				});
+			},
+			butterchurnOpen: true,
+		},
+		initialTracks: [
+	        {
+				url: "https://file.garden/Z-2H6tWhPAglb48I/05%20Kanye%20West%20-%20On%20God.flac",
+				defaultName: "Kanye West - On God",
+			},
+			{
+				url: "https://file.garden/aWqglscXH3YX9a2r/Kanye%20West%2C%20Clipse%20%26%20Kenny%20G%20-%20Use%20This%20Gospel.flac",
+				defaultName: "Kanye West - Use This Gospel",
+			},
+			{
+				url: "https://file.garden/aWqglscXH3YX9a2r/Lil%20Uzi%20Vert%20-%20Days%20Come%20and%20Go.flac",
+				defaultName: "Lil Uzi Vert - Days Come and Go",
+			},
+		    {   url: "https://file.garden/aWqglscXH3YX9a2r/Lil%20Yachty%20-%20drive%20ME%20crazy!.flac",
+		        defaultName: "Lil Yachty - drive ME crazy!",
+	        },
+		],
+		windowLayout: {
+			main: { position: { top: 0, left: 0 } },
+			equalizer: { position: { top: 116, left: 0 } },
+			playlist: {
+				position: { top: 232, left: 0 },
+				size: { extraWidth: 0, extraHeight: 4 },
+			},
+			milkdrop: {
+				position: { top: 0, left: 275 },
+				size: { extraHeight: 12, extraWidth: 7 },
+			},
+		},
+	});
+
+	webamp.renderWhenReady(document.getElementById("app"));
